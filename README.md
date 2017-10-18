@@ -1,2 +1,3 @@
-# Server And Database
-This is a repository for all of the server and database portion of the Child Guard Bracelet project.
+# Web App
+This repository contains all of the code involved for the webb app, which includes the data base,
+the server, as well as the client.
