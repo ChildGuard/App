@@ -14,9 +14,32 @@ btn.addEventListener('click', function(){
     latitude: latitude.value,
     longitude: longitude.value
   });
+
+  // var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  //  var count = 0;
+  //  for(var i = 0; i < data.length; i++){
+  //    var latlongset = new google.maps.LatLng(latitude.value, longitude.value);
+  //    var marker = new google.maps.Marker({
+  //      position: latlngset,
+  //      map:map,
+  //      title: "i'm the map!"
+  //    });
+  //  };
 });
 
 //Listen for events
 socket.on('chat', function(data){
-  output.innerHTML +='<p><strong>' + data.latitude + ', </strong>' + data.longitude + "</p";
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+   var count = 0;
+   for(var i = 0; i < data.length; i++){
+     var latlongset = new google.maps.LatLng(data.latitude, data.longitude);
+     var marker = new google.maps.Marker({
+       position: latlngset,
+       map:map,
+       title: "i'm the map!"
+     });
+   };
+  // console.log(data);
+  // output.innerHTML +='<p><strong>' + data.latitude + ', </strong>' + data.longitude + "</p";
+  // output.innerHTML +='<p><strong>' + data.latitude + ', </strong>' + data.longitude + "</p";
 });
