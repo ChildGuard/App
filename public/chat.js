@@ -29,12 +29,15 @@ btn.addEventListener('click', function(){
 
 //Listen for events
 socket.on('chat', function(data){
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 26.770372, lng: -81.368297},
+    zoom: 20
+  });
+
    var count = 0;
-   for(var i = 0; i < data.length; i++){
-     var latlongset = new google.maps.LatLng(data.latitude, data.longitude);
-     var marker = new google.maps.Marker({
-       position: latlngset,
+   var latlongset = new google.maps.LatLng(data.latitude, data.longitude);
+   var marker = new google.maps.Marker({
+       position: {lat: 26.770372, lng: -80.368297},
        map:map,
        title: "i'm the map!"
      });

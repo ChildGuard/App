@@ -17,7 +17,7 @@
      }
      /* Optional: Makes the sample page fill the window. */
      html, body {
-       height: 50%;
+       height: 90%;
        margin: 0;
        padding: 0;
      }
@@ -45,6 +45,20 @@
          center: {lat: 25.770372, lng: -80.368297},
          zoom: 20
        });
+
+       addMarker({lat: 25.770372, lng: -80.368297});
+
+       function addMarker(coords){
+         var marker = new google.maps.Marker({
+           position: coords,
+           map:map
+         });
+       }
+
+      //  var marker = new google.maps.Marker({
+      //    position:{lat: 25.770372, lng: -80.368297},
+      //    map:map
+      //  });
      }
    </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrE-NeTKpgt_qNgN0v_NMse1Ca00ntzFM&callback=initMap"
