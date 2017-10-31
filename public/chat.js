@@ -15,45 +15,10 @@ btn.addEventListener('click', function() {
         latitude: latitude.value,
         longitude: longitude.value
     });
-
-    // var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    //  var count = 0;
-    //  for(var i = 0; i < data.length; i++){
-    //    var latlongset = new google.maps.LatLng(latitude.value, longitude.value);
-    //    var marker = new google.maps.Marker({
-    //      position: latlngset,
-    //      map:map,
-    //      title: "i'm the map!"
-    //    });
-    //  };
 });
-//
-// function addMarker(coords){
-//   var marker = new google.maps.Marker({
-//     position: coords,
-//     map:map
-//   });
-// }
 
 //Listen for events
 socket.on('chat', function(data) {
-    // map.innerHTML += <script>
-    // addMarker({lat: latitude.value, lng: longitude.value});
-    //
-    // // var mapOptions = {
-    // //   center: new google.maps.LatLng(data['latitude'], data['longitude']),
-    // //   zoom: 7,
-    // //   mapTypeId: google.maps.MapTypeId.ROADMAP
-    // // };
-    // // var marker = new google.maps.Marker({
-    // //                   position: new google.maps.LatLng(data['latitude'],data['longitude']),
-    // //                   map: map,
-    // //                   title: String("poop"),
-    // //                 });
-    //   });
-    //   </script>
-    //
-
     // var myLatlng = new google.maps.LatLng(parseFloat(data.latitude),parseFloat(data.longitude));
 
     var floatLat = parseFloat(data.latitude);
@@ -67,11 +32,7 @@ socket.on('chat', function(data) {
         },
         zoom: 20
     });
-    console.log(typeof(floatLat));
 
-    //  var count = 0;
-    //  var latlongset = new google.maps.LatLng(data.latitude, data.longitude);
-    //
     coords = {
         lat: 20,
         lng: 20
@@ -84,7 +45,5 @@ socket.on('chat', function(data) {
         },
         map: map
     });
-    // };
-
     // output.innerHTML += '<p><strong>' + data.latitude + ', </strong>' + data.longitude + "</p";
 });
