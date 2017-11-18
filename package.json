@@ -1,0 +1,23 @@
+{
+  "name": "childguard",
+  "version": "1.0.0",
+  "description": "This is the package.json file that contains all of the dependencies of the project.",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChildGuard/WebApp.git"
+  },
+  "author": "Benjamin Luis Anthony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChildGuard/WebApp/issues"
+  },
+  "homepage": "https://github.com/ChildGuard/WebApp#readme"
+}
