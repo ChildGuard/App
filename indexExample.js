@@ -40,10 +40,10 @@ var server = net.createServer(function (conn) {
 
     // Handle data from client
     conn.on("data", function(data) {
-        data = JSON.parse(data);
-        console.log("Response from client: %s", data.response);
-        latitude = data.response
-        io.sockets.emit('chat', latitude);
+        //do parsing over here
+        var location = JSON.parse(data);
+        console.log("Response from client: %s", location);
+        io.sockets.emit('chat', location);
     });
 
     // Let's response with a hello message

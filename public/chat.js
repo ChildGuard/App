@@ -22,26 +22,22 @@ socket.on('chat', function(data) {
     // var myLatlng = new google.maps.LatLng(parseFloat(data.latitude),parseFloat(data.longitude));
 
     console.log("Wtf is this shit" + data);
-    var floatLat = parseFloat(data);
-    // var floatLng = parseFloat(data.longitude);
+    console.log("wtf is this other bullshit" + data.lat);
+    console.log("wtf is this other bullshit number two" + data.lng);
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: floatLat,
-            lng: floatLat
+            lat: data.lat,
+            lng: data.lng
         },
         zoom: 20
     });
 
-    coords = {
-        lat: 20,
-        lng: 20
-    };
 
     var marker = new google.maps.Marker({
         position: {
-          lat: floatLat,
-          lng: floatLat
+          lat: data.lat,
+          lng: data.lng
         },
         map: map
     });
