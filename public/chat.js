@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect("http://localhost:4000");
+var socket = io.connect("http://childguard.anthony-nunez.me");
 
 var coords;
 

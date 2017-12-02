@@ -9,8 +9,8 @@ var nett = require("net");
 var socket = new nett.Socket();
 ////////
 
-var HOST = '127.0.0.1';
-var PORT = 5905;
+var HOST = 'childguard.anthony-nunez.me';
+var PORT = 5911;
 
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
@@ -27,7 +27,7 @@ net.createServer(function(sock) {
 
         console.log('DATA ' + sock.remoteAddress + ': ' + data2);
         // Write the data back to the socket, the client will receive it as data from the server
-        sock.write('You said "' + data2 + '"');
+        // sock.write('You said "' + data2 + '"');
 
       var location;
       location = JSON.parse(data2);
@@ -52,7 +52,7 @@ net.createServer(function(sock) {
 
         // console.log('DATA ' + sock.remoteAddress + ': ' + data.data);
         // Write the data back to the socket, the client will receive it as data from the server
-        sock.write('You said "' + data + '"');
+        // sock.write('You said "' + data + '"');
 
     });
 

@@ -1,10 +1,12 @@
 var express = require('express');
 var socket = require('socket.io');
 
+var HOST = '127.0.0.1';
+var PORT = 61337;
 //App setup
 var app = express();
-var server = app.listen(4000, function(){
-  console.log('listening to requests on port 4000')
+var server = app.listen(80, function(){
+  console.log('listening to requests on port 80')
 });
 
 //static files
@@ -26,7 +28,7 @@ io.on('connection',function(socket){
 const net = require("net");
 
 // Create a simple server
-var server = net.createServer(function (conn) {
+net.createServer(function (conn) {
     console.log("Server: Client connected");
 
     // If connection is closed
@@ -52,9 +54,9 @@ var server = net.createServer(function (conn) {
             { response: "Hey there client!" }
         )
     );
-});
+}).listen(PORT, HOST);
 
 // Listen for connections
-server.listen(61337, "localhost", function () {
-    console.log("Server: Listening");
-});
+// server.listen(61337, "localhost", function () {
+//     console.log("Server: Listening");
+// });
