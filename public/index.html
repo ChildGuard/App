@@ -35,8 +35,6 @@
    </div>
    <script src="/chat.js"></script>
 
-
-
    <div id="map"></div>
    <script>
    var map;
@@ -49,6 +47,7 @@
 
        function addMarker(coords){
          var marker = new google.maps.Marker({
+           icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
            position: coords,
            map:map
          });
