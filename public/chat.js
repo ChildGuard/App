@@ -1,5 +1,10 @@
 // Make connection
 var socket = io.connect("http://childguard.anthony-nunez.me");
+var arr = []; //new Array(5);
+
+// for(var i = 0; i < arr.length; i++){
+//   arr[i] = null;
+// }
 
 var coords;
 
@@ -24,6 +29,7 @@ socket.on('chat', function(data) {
     console.log("Wtf is this shit" + data);
     console.log("wtf is this other bullshit" + data.lat);
     console.log("wtf is this other bullshit number two" + data.lng);
+    console.log("the panic bullshit is: " + data.panic)
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -34,12 +40,42 @@ socket.on('chat', function(data) {
     });
 
 
-    var marker = new google.maps.Marker({
-        position: {
-          lat: data.lat,
-          lng: data.lng
-        },
-        map: map
+if(arr.length == 5)
+{
+  arr.pop;
+  arr.unshift(data);
+}
+else {
+  arr.push(data);
+}
+
+//if array is 5, remove last item and push in new one
+    // array.push
+
+    arr.forEach(function(element) {
+        console.log(element);
+    if(element.panic == 1)
+    {
+      var marker = new google.maps.Marker({
+        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+          position: {
+            lat: element.lat,
+            lng: element.lng
+          },
+          map: map
+      });
+    }
+    else
+    {
+      var marker = new google.maps.Marker({
+        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+          position: {
+            lat: element.lat,
+            lng: element.lng
+          },
+          map: map
+      });
+    }
     });
     // output.innerHTML += '<p><strong>' + data.latitude + ', </strong>' + data.longitude + "</p";
 });

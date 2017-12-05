@@ -42,7 +42,8 @@ net.createServer(function(sock) {
     });
   });
   ////////
-  //     {"lat":25.3, "long":63.7}
+  //     {"lat":25.3, "lng":63.7, "panic": 1}
+  //     {"lat":25.3, "lng":63.7, "panic": 0}
 
     // We have a connection - a socket object is assigned to the connection automatically
     console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
