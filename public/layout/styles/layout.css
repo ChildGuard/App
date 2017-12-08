@@ -1,0 +1,176 @@
+@charset "utf-8";
+/*
+Template Name: Algenius
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("font-awesome.min.css");
+@import url("framework.css");
+
+
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase;}
+
+#topbar *{margin:0; padding:0; list-style:none;}
+#topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
+#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
+#topbar i{margin:0 5px 0 0; line-height:normal;}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:50px 0;}
+
+#header #logo *{margin:0; padding:0; line-height:1;}
+#header #logo h1{margin-top:8px; font-size:26px; letter-spacing:3px;}
+
+#header #quickinfo{font-size:.8rem; text-transform:uppercase;}
+#header #quickinfo li{margin-right:50px;}
+#header #quickinfo li:last-child{margin-right:0;}
+#header #quickinfo strong{display:block; margin:0 0 -5px 0; padding:0; font-size:.9rem;}
+#header #quickinfo br{display:none;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:200px 0;}
+#pageintro *{word-wrap:break-word;}
+#pageintro .heading{margin-bottom:20px; font-size:5rem; font-weight:400;}
+#pageintro p{font-size:1.2rem;}
+#pageintro footer{margin-top:50px;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#A8A7A6; background-color:#191919;}
+a{color:#562351;}
+a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#F4F4F4;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#562351;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.8);}
+.overlay.coloured::after{}
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#562351; border-color:#562351;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+/* Flexslider */
+.flex-direction-nav a, .flex-direction-nav .flex-disabled:hover{color:#FFFFFF;}
+.flex-direction-nav a:hover{color:#562351;}
+
+
+/* Rows */
+.row0, .row0 a{color:#A8A7A6; background-color:#222222;}
+.row1{color:#474747; background-color:#FFFFFF;}
+.row2{color:#474747; background-color:#F1F1F1;}
+.row3{color:#474747; background-color:#FFFFFF;}
+.row4{color:#A8A7A6; background-color:#222222;}
+.row4 a{color:#9E4195;}
+.row5, .row5 a{color:#FFFFFF; background-color:#562351;}
+
+
+/* Top Bar */
+#topbar, #topbar ul li{border-color:rgba(255,255,255,.2);}
+#topbar > div:last-of-type li:first-child a{color:#9E4195;}
+
+
+/* Header */
+#header #logo a{color:inherit;}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:900px){
+	.hoc{max-width:90%;}
+
+	#header{}
+
+	#mainav{}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+
+	#breadcrumb{}
+
+	.container{}
+	#comments input[type="reset"]{margin-top:10px;}
+	.pagination li{display:inline-block; margin:0 5px 5px 0;}
+
+	#footer{}
+
+	#copyright{}
+	#copyright p:first-of-type{margin-bottom:10px;}
+}
+
+
+@media screen and (max-width:750px){
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+
+	#header{text-align:center;}
+	#header #logo{margin:0 0 30px 0;}
+
+	#pageintro .heading{font-size:2rem;}
+}
+
+
+@media screen and (max-width:450px){
+	.testimonials article{padding-left:0;}
+	.testimonials article img{position:relative; top:inherit; left:inherit; margin-bottom:20px;}
+}
+
+
+/* Other
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.4rem;}
+	.font-x3{font-size:1.6rem;}
+
+	#header #quickinfo li{display:block; margin-right:0;}
+}
