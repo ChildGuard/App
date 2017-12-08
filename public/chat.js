@@ -26,11 +26,6 @@ output = document.getElementById("output");
 socket.on('chat', function(data) {
     // var myLatlng = new google.maps.LatLng(parseFloat(data.latitude),parseFloat(data.longitude));
 
-    console.log("Wtf is this shit" + data);
-    console.log("wtf is this other bullshit" + data.lat);
-    console.log("wtf is this other bullshit number two" + data.lng);
-    console.log("the panic bullshit is: " + data.panic)
-
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: data.lat,
